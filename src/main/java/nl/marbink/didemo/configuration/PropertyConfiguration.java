@@ -1,17 +1,14 @@
 package nl.marbink.didemo.configuration;
 
 import nl.marbink.didemo.examplebeans.FakeDataSource;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
-import org.springframework.core.env.Environment;
 
 @Configuration
 public class PropertyConfiguration {
 
+    //TODO: env value can be overriden with -D variable marbink.user
     //TODO: value can be overriden with env variable MARBINK_USER
     @Value("${marbink.user}")
     String user;
